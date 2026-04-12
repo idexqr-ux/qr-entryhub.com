@@ -19,6 +19,7 @@ body {
 .intro {
   color: #666;
   margin-bottom: 40px;
+  line-height: 1.6;
 }
 
 .cards {
@@ -34,4 +35,10 @@ body {
   text-decoration: none;
   color: inherit;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  line-height: 1.6;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
