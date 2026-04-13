@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<a id="top"></a>
 
 <header class="wrap hero" aria-hidden="true">
   <p class="kicker">EntryHub</p>
@@ -21,9 +22,9 @@
   <section aria-labelledby="page-title">
     <h1 id="page-title" class="sr-only">Spring Home and Living Show guide</h1>
     <p class="sr-only">
-  You have opened the guide for the Spring Home and Living Show.
-  This page provides helpful information for arrival, parking, directions, and leaving the event.
-</p>
+      You have opened the guide for the Spring Home and Living Show.
+      This page provides helpful information for arrival, parking, directions, and leaving the event.
+    </p>
   </section>
 
   <p class="sub">National Exhibition Centre, Birmingham</p>
@@ -36,45 +37,39 @@
     Hall 3, Block B, Row 12 — just to the right as you enter
   </p>
 
-  <!-- 🌿 Actions -->
   <div class="listen-group">
-  <a href="spring-show.ics" class="quiet-button">
-    Add to calendar
-  </a>
+    <a href="spring-show.ics" class="quiet-button">
+      Add to calendar
+    </a>
 
-  <a href="https://www.google.com/maps/search/?api=1&query=National+Exhibition+Centre+Birmingham"
-     class="quiet-button"
-     target="_blank"
-     rel="noopener">
-    Open in maps
-  </a>
-</div>
+    <a href="https://www.google.com/maps/search/?api=1&query=National+Exhibition+Centre+Birmingham"
+       class="quiet-button"
+       target="_blank"
+       rel="noopener">
+      Open in maps
+    </a>
+  </div>
 
-  <!-- 🌿 Notes (audio-led) -->
   <p class="muted-line">Getting there</p>
 
   <div class="listen-group">
+    <button class="quiet-button" type="button" onclick="playEmbeddedAudio('trainAudio')">
+      Train — note
+    </button>
 
-  <button class="quiet-button" type="button" onclick="playEmbeddedAudio('trainAudio')">
-    Train — note
-  </button>
+    <button class="quiet-button" type="button" onclick="playEmbeddedAudio('eventAudio')">
+      Event — note
+    </button>
 
-  <button class="quiet-button" type="button" onclick="playEmbeddedAudio('eventAudio')">
-    Event — note
-  </button>
+    <button class="quiet-button" type="button" onclick="playEmbeddedAudio('parkingAudio')">
+      Parking — note
+    </button>
+  </div>
 
-  <button class="quiet-button" type="button" onclick="playEmbeddedAudio('parkingAudio')">
-    Parking — note
-  </button>
-
-</div>
-
-  <!-- 🌿 Optional ticket placeholder -->
   <div class="listen-group">
     <span class="quiet-button">Ticket QR (coming soon)</span>
   </div>
 
-  <!-- 🌿 Save to phone -->
   <div class="save-ticket">
     <p class="save-line">
       For quick access on the day, you can save this page to your home screen.
@@ -105,10 +100,10 @@
 
 </main>
 
-<!-- 🌿 Audio -->
 <audio id="parkingAudio" src="audio/parking.mp3" preload="auto"></audio>
 <audio id="trainAudio" src="audio/train.mp3" preload="auto"></audio>
 <audio id="eventAudio" src="audio/spring-show.mp3" preload="auto"></audio>
+
 <script>
 let currentAudio = null;
 
