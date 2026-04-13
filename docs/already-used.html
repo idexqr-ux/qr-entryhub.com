@@ -3,20 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ticket already used</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Ticket recognised</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f7f9f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    img {
+      max-width: 95%;
+      height: auto;
+    }
+  </style>
 </head>
 
 <body>
-  <main class="wrap" style="text-align:center; padding-top:40px;">
-    <p class="kicker">EntryHub</p>
-    <h1>Ticket already used</h1>
-    <p class="sub">This ticket has already been scanned.</p>
-
-    <img src="/images/ticket-used.png" alt="Used ticket" style="max-width:260px; width:100%; margin:24px auto; display:block;" />
-
-    <p class="muted-line">Spring Home and Living Show</p>
-    <p class="muted-line">Ticket code: SHLS-001066</p>
-  </main>
+  <img src="/images/ticket-used.png" alt="Used ticket" />
 </body>
 </html>
