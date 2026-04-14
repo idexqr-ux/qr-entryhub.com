@@ -14,10 +14,6 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: #f7f9f8;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;   /* 👈 key change */
-  padding-top: 60px;         /* 👈 gentle drop from top */
   min-height: 100vh;
   font-family: Arial, sans-serif;
 }
