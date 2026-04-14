@@ -231,3 +231,15 @@ main.wrap {
 .venue {
   letter-spacing: 0.03em;
 }
+
+.ticket-name {
+  margin-top: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ticket-id {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  color: #5b6770;
+}
