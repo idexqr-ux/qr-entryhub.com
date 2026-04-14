@@ -184,17 +184,17 @@ sup {
   vertical-align: 0.25em;
 }
 
+/* --- Door status bar --- */
 .status {
   width: 100%;
   text-align: center;
-  font-family: Arial, sans-serif;
   font-weight: bold;
-  font-size: 28px;
-  padding: 14px 0;
+  font-size: 32px;
+  padding: 16px 0;
   letter-spacing: 1px;
 }
 
-/* Colours */
+/* Status colours */
 .status.accept {
   background: #e6f4ea;
   color: #1e7e34;
@@ -209,7 +209,6 @@ sup {
   background: #fdecea;
   color: #b00020;
 }
-
 .status {
   font-size: 32px;
   padding: 18px 0;
