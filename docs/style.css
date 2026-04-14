@@ -32,12 +32,14 @@ body {
   max-width: 860px;
   margin: 0 auto;
   padding: 18px 16px;
+  text-align: center;       /* 👈 add this */
 }
 
 .hero {
   text-align: center;
   margin-top: 6px;
   margin-bottom: 1.25rem;
+  width: 100%;              /* 👈 add this */
 }
 
 .kicker {
