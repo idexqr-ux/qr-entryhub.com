@@ -209,3 +209,8 @@ sup {
   background: #fdecea;
   color: #b00020;
 }
+
+.status {
+  font-size: 32px;
+  padding: 18px 0;
+}
