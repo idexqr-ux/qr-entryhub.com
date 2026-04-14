@@ -212,16 +212,20 @@ sup {
 }
 
 header.hero,
-header.hero .kicker,
-header.hero h1,
-header.hero .sub {
-  text-align: center;
-}
-
-header.hero {
+main.wrap,
+.wrap {
   width: 100%;
+  max-width: 860px;
   margin-left: auto;
   margin-right: auto;
+}
+
+header.hero,
+header.hero .kicker,
+header.hero h1,
+header.hero .sub,
+main.wrap {
+  text-align: center;
 }
 
 .venue {
