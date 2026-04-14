@@ -183,3 +183,29 @@ sup {
   font-size: 0.65em;
   vertical-align: 0.25em;
 }
+
+.status {
+  width: 100%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  padding: 14px 0;
+  letter-spacing: 1px;
+}
+
+/* Colours */
+.status.accept {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+
+.status.used {
+  background: #fff4e5;
+  color: #b26a00;
+}
+
+.status.invalid {
+  background: #fdecea;
+  color: #b00020;
+}
