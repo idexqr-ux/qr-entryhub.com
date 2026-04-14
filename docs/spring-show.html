@@ -66,15 +66,22 @@
     </button>
   </div>
 
-  <div class="listen-group">
-    <a href="ticket.html" class="quiet-button">Your ticket</a>
+ <div class="listen-group">
+  <a href="ticket.html" class="quiet-button">Your ticket</a>
+</div>
+
+<div class="save-ticket">
+  <p class="save-line">
+    Keep this handy —
+    <button class="save-link" onclick="toggleSaveHelp()">add to your home screen</button>
+  </p>
+
+  <div id="saveHelp" class="save-help" hidden>
+    <p>On iPhone or iPad:</p>
+    <p>Tap the share icon ↑, then choose “Add to Home Screen”.</p>
   </div>
-
-  <div class="save-ticket">
-    <p class="save-line">
-      For quick access on the day, you can save this page to your home screen.
-    </p>
-
+</div>
+  
     <button class="save-link" type="button" onclick="toggleSaveHelp()" aria-expanded="false" aria-controls="saveHelp">
       How to save
     </button>
