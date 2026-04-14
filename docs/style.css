@@ -233,15 +233,13 @@ main.wrap {
 }
 
 .ticket-name {
-  margin-top: 12px;
-  margin-bottom: 2px;
-  font-size: 1.1rem;
+  margin: 10px 0 2px;
+  font-size: 1.05rem;
   font-weight: 600;
 }
 
 .ticket-id {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 0.95rem;
+  margin: 0 0 10px;
+  font-size: 0.9rem;
   color: #5b6770;
 }
