@@ -3,52 +3,342 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>September Home and Living Show</title>
-  <meta name="description" content="Helpful notes for your visit before you arrive and while you are there." />
-  <link rel="stylesheet" href="style.css?v=6" />
+  <title>EntryHub</title>
+  <meta
+    name="description"
+    content="Your guide for the September Home and Living Show, including event details, helpful notes, and access to your ticket."
+  />
+  <link rel="stylesheet" href="style.css?v=1" />
+  <style>
+    :root {
+      --bg: #f7f9f8;
+      --card: #ffffff;
+      --text: #2f3a36;
+      --muted: #5f6f69;
+      --line: #d8e1dd;
+      --accent: #b8c6c1;
+      --accent-deep: #8fa39b;
+      --button-text: #24302c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    .wrap {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      padding: 24px 18px 40px;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px 20px;
+      margin-bottom: 18px;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+
+    .intro,
+    .muted-line,
+    .location-line {
+      margin: 0 0 10px;
+    }
+
+    .location-line {
+      font-weight: 600;
+    }
+
+    .action-grid,
+    .note-grid {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0 0;
+    }
+
+    .action-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .note-grid {
+      grid-template-columns: 1fr;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 640px) {
+      .action-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .note-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .quiet-link,
+    .quiet-button {
+      appearance: none;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid var(--accent-deep);
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--button-text);
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.05s ease, opacity 0.2s ease;
+    }
+
+    .quiet-link:hover,
+    .quiet-button:hover {
+      opacity: 0.95;
+    }
+
+    .quiet-link:active,
+    .quiet-button:active {
+      transform: translateY(1px);
+    }
+
+    .notes {
+      margin-top: 20px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .note-panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .note-panel[hidden] {
+      display: none;
+    }
+
+    .note-panel h2 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .note-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-label {
+      margin: 22px 0 10px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 </head>
-
 <body>
+  <main class="wrap">
+    <section class="hero">
+      <p class="kicker">EntryHub</p>
 
-  <main class="wrap hero">
-    <p class="kicker">EntryHub</p>
-    <h1>September Home and Living Show</h1>
+      <h1>September Home and Living Show</h1>
+
+      <p class="intro">
+        You have opened your guide for the September Home and Living Show.
+        This page includes your event details, arrival notes, and access to your ticket.
+      </p>
+
+      <p class="muted-line">
+        Helpful notes for your visit — before you arrive and while you are there.
+      </p>
+
+      <p class="location-line">National Exhibition Centre, Birmingham</p>
+
+      <p class="muted-line">Saturday 9 September · doors open at 10:00am</p>
+
+      <p class="muted-line">Hall 3, Block B, Row 12 — just to the right as you enter</p>
+
+      <div class="action-grid">
+        <a
+          class="quiet-link"
+          href="calendar.ics"
+          download
+        >
+          Save to your calendar
+        </a>
+
+        <a
+          class="quiet-link"
+          href="https://maps.google.com/?q=National+Exhibition+Centre+Birmingham"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open in maps
+        </a>
+
+        <!-- IMPORTANT:
+             This should go to the VISITOR ticket page, not the door-person result page.
+             guide.html -> ticket.html -> scan/check -> accept.html (or other outcomes)
+        -->
+        <a class="quiet-link" href="ticket.html">
+          Your ticket
+        </a>
+      </div>
+
+      <p class="section-label" id="notes-heading">Helpful notes</p>
+
+      <div class="note-grid" aria-labelledby="notes-heading">
+        <button
+          type="button"
+          class="quiet-button"
+          onclick="playSection('trainAudio', 'trainPanel')"
+        >
+          Train — note
+        </button>
+
+        <button
+          type="button"
+          class="quiet-button"
+          onclick="playSection('eventAudio', 'eventPanel')"
+        >
+          Event — note
+        </button>
+
+        <button
+          type="button"
+          class="quiet-button"
+          onclick="playSection('parkingAudio', 'parkingPanel')"
+        >
+          Parking — note
+        </button>
+      </div>
+    </section>
+
+    <section class="notes" aria-live="polite">
+      <div id="trainPanel" class="note-panel" hidden>
+        <h2>Train — note</h2>
+        <p>
+          If you are arriving by train, allow a little extra time once you reach the NEC.
+          Signage is usually clear, but stations and walkways can feel busier than expected.
+        </p>
+        <p>
+          A calm approach is best: follow the signs for your hall, and keep your ticket ready on your phone.
+        </p>
+      </div>
+
+      <div id="eventPanel" class="note-panel" hidden>
+        <h2>Event — note</h2>
+        <p>
+          Doors open at 10:00am. Your seat is in Hall 3, Block B, Row 12, just to the right as you enter.
+        </p>
+        <p>
+          It can help to open this guide before you arrive, so your event details and ticket are easy to reach.
+        </p>
+      </div>
+
+      <div id="parkingPanel" class="note-panel" hidden>
+        <h2>Parking — note</h2>
+        <p>
+          If you are driving, parking signs may direct you to the nearest available area on the day.
+          Take a moment to note where you have parked before heading in.
+        </p>
+        <p>
+          If a shuttle bus is in use, allow a little extra time between parking and the entrance.
+        </p>
+      </div>
+    </section>
 
     <p class="sr-only">
-      You have opened your guide for the September Home and Living Show.
-      This page includes your event details, arrival notes, and access to your ticket.
+      This guide includes your event details, a link to your visitor ticket, and three spoken notes:
+      train, event, and parking.
     </p>
 
-    <p class="tagline">
-      Helpful notes for your visit — before you arrive and while you are there.
-    </p>
+    <audio id="trainAudio" preload="none">
+      <source src="audio/train-note.mp3" type="audio/mpeg" />
+    </audio>
 
-    <section class="event-summary" aria-label="Event details">
-      <p>National Exhibition Centre, Birmingham</p>
-      <p>Saturday 9 September · doors open at 10:00am</p>
-      <p>Hall 3, Block B, Row 12 — just to the right as you enter</p>
-    </section>
+    <audio id="eventAudio" preload="none">
+      <source src="audio/event-note.mp3" type="audio/mpeg" />
+    </audio>
 
-    <nav aria-label="Guide options">
-      <div class="links">
-        <a href="https://calendar.google.com">Save to your calendar</a>
-        <a href="https://maps.google.com/?q=National+Exhibition+Centre+Birmingham">Open in maps</a>
-        <a href="accept.html">Your ticket</a>
-      </div>
-    </nav>
-
-    <section aria-labelledby="getting-there">
-      <h2 id="getting-there">Getting there</h2>
-      <p>Train — note</p>
-      <p>Event — note</p>
-      <p>Parking — note</p>
-    </section>
+    <audio id="parkingAudio" preload="none">
+      <source src="audio/parking-note.mp3" type="audio/mpeg" />
+    </audio>
   </main>
 
-  <footer>
-    <div class="footer-line"></div>
-    <p class="footer-text">IdexQR</p>
-  </footer>
+  <script>
+    let currentAudio = null;
 
+    function stopCurrentAudio() {
+      if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+    }
+
+    function hideAllPanels() {
+      document.querySelectorAll('.note-panel').forEach(panel => {
+        panel.hidden = true;
+      });
+    }
+
+    function playSection(audioId, panelId) {
+      const nextAudio = document.getElementById(audioId);
+      const nextPanel = document.getElementById(panelId);
+
+      stopCurrentAudio();
+      hideAllPanels();
+
+      if (nextPanel) {
+        nextPanel.hidden = false;
+      }
+
+      if (!nextAudio) return;
+
+      currentAudio = nextAudio;
+      currentAudio.currentTime = 0;
+
+      const playPromise = currentAudio.play();
+      if (playPromise && typeof playPromise.then === 'function') {
+        playPromise.catch(() => {
+          /* prevents console noise if autoplay/playback is blocked */
+        });
+      }
+    }
+  </script>
 </body>
 </html>
