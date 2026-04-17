@@ -4,15 +4,125 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Your ticket</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta
+    name="description"
+    content="Your EntryHub ticket for the September Home and Living Show."
+  />
+  <link rel="stylesheet" href="style.css?v=1" />
+  <style>
+    :root {
+      --bg: #f7f9f8;
+      --card: #ffffff;
+      --text: #2f3a36;
+      --muted: #5f6f69;
+      --line: #d8e1dd;
+      --accent: #b8c6c1;
+      --accent-deep: #8fa39b;
+      --button-text: #24302c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    .wrap {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      padding: 24px 18px 40px;
+    }
+
+    .ticket-shell {
+      padding-top: 40px;
+      text-align: center;
+    }
+
+    .ticket-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px 20px;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+
+    .sub {
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    .ticket-meta {
+      margin: 0 0 22px;
+      font-size: 0.98rem;
+    }
+
+    .ticket-qr {
+      max-width: 320px;
+      width: 100%;
+      margin: 24px auto;
+      display: block;
+    }
+
+    .quiet-link {
+      appearance: none;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      border: 1px solid var(--accent-deep);
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--button-text);
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .helper {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
 <body>
-  <main class="wrap" style="text-align:center; padding-top:40px;">
-    <p class="kicker">EntryHub</p>
-    <h1>Your ticket</h1>
-    <p class="sub">Ready to scan at the door.</p>
+  <main class="wrap ticket-shell">
+    <section class="ticket-card">
+      <p class="kicker">EntryHub</p>
+      <h1>Your ticket</h1>
+      <p class="sub">Ready to scan at the door.</p>
+      <p class="ticket-meta">September Home and Living Show</p>
 
-    <img src="images/ticket-qr-valid.png" alt="Ticket QR code" style="max-width:320px; width:100%; margin:24px auto; display:block;" />
+      <img
+        src="images/ticket-qr-valid.png"
+        alt="Ticket QR code for entry"
+        class="ticket-qr"
+      />
+
+      <a class="quiet-link" href="guide.html">Back to guide</a>
+
+      <p class="helper">
+        Keep this page open so your ticket is easy to reach when you arrive.
+      </p>
+    </section>
   </main>
 </body>
 </html>
