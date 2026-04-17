@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ready to scan</title>
+  <link rel="stylesheet" href="style.css?v=1" />
+  <style>
+    :root {
+      --bg: #f7f9f8;
+      --card: #ffffff;
+      --text: #2f3a36;
+      --muted: #5f6f69;
+      --line: #d8e1dd;
+      --accent: #b8c6c1;
+      --accent-deep: #8fa39b;
+      --button-text: #24302c;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+    }
+
+    .wrap {
+      width: min(100%, 480px);
+      margin: 0 auto;
+      padding: 40px 16px;
+      text-align: center;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px 20px;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .quiet-link {
+      appearance: none;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 48px;
+      margin-top: 20px;
+      padding: 12px 18px;
+      border: 1px solid var(--accent-deep);
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--button-text);
+      text-decoration: none;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <p class="kicker">EntryHub</p>
+      <h1>Ready to scan</h1>
+      <p class="sub">Use your phone to scan the next ticket when ready.</p>
+      <a class="quiet-link" href="index.html">Back to demo</a>
+    </section>
+  </main>
+</body>
+</html>
