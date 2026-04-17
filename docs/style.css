@@ -50,6 +50,23 @@ h1 {
   line-height: 1.2;
 }
 
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.links a {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  background: #e9ecea;
+  border: 1px solid #d2d8d5;
+  color: #2f4a44;
+  letter-spacing: 0.04em;
+}
+
 .sub {
   margin: 0 0 8px;
   color: var(--muted);
