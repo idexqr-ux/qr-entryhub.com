@@ -142,6 +142,17 @@
     currentAudio.currentTime = 0;
     currentAudio.play().catch(() => {});
   }
+
+  function toggleSaveHelp() {
+  const help = document.getElementById('saveHelp');
+  const button = document.querySelector('.save-link');
+
+  if (!help || !button) return;
+
+  const isHidden = help.hidden;
+  help.hidden = !isHidden;
+  button.setAttribute('aria-expanded', String(isHidden));
+}
 </script>
 </body>
 </html>
