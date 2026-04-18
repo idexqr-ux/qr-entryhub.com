@@ -113,7 +113,6 @@
     <p><strong>To keep this handy:</strong></p>
     <p>Tap the share icon at the top of your screen, then choose <em>Add to Home Screen</em>.</p>
   </div>
-</div>
 
   <footer class="footer" style="text-align:center; margin-top:32px;">
     <a href="demo.html" class="back-link">Back to demo</a>
@@ -141,15 +140,8 @@
     }
   }
 
-  function hideAllPanels() {
-    document.querySelectorAll('.note-panel').forEach(panel => {
-      panel.hidden = true;
-    });
-  }
-
   function stopPlayback() {
     stopCurrentAudio();
-    hideAllPanels();
     currentAudio = null;
   }
 
@@ -158,11 +150,12 @@
     const nextPanel = document.getElementById(panelId);
 
     stopCurrentAudio();
-    hideAllPanels();
 
-    if (nextPanel) {
-      nextPanel.hidden = false;
-    }
+    document.querySelectorAll('.note-panel').forEach(panel => {
+      panel.hidden = true;
+    });
+
+    if (nextPanel) nextPanel.hidden = false;
 
     if (!nextAudio) return;
 
