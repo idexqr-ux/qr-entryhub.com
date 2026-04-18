@@ -110,6 +110,8 @@ h1 {
 }
 
 .stop-button {
+  display: block;
+  width: 100%;
   margin-top: 12px;
   background: #e9efec;
   border: 1px solid #cfd8d4;
