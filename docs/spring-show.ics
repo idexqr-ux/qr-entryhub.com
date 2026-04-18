@@ -1,10 +1,10 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
-SUMMARY:Spring Home and Living Show
-DTSTART:20260412T090000Z
-DTEND:20260412T160000Z
+SUMMARY:September Home and Living Show
+DTSTART:20260909T090000Z
+DTEND:20260909T160000Z
 LOCATION:National Exhibition Centre, Birmingham
-DESCRIPTION:Spring Home and Living Show — EntryHub guide
+DESCRIPTION:September Home and Living Show — EntryHub guide
 END:VEVENT
 END:VCALENDAR
