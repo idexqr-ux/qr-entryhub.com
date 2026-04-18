@@ -117,31 +117,44 @@
 <audio id="parkingAudio" src="audio/parking-note.mp3" preload="none"></audio>
   
 <script>
-let currentAudio = null;
+  let currentAudio = null;
 
-function stopCurrentAudio() {
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0;
+  function stopCurrentAudio() {
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
   }
-}
 
-function playEmbeddedAudio(id) {
-  stopCurrentAudio();
-  currentAudio = document.getElementById(id);
-  if (!currentAudio) return;
-  currentAudio.currentTime = 0;
-  currentAudio.play().catch(() => {});
-}
+  function hideAllPanels() {
+    document.querySelectorAll('.note-panel').forEach(panel => {
+      panel.hidden = true;
+    });
+  }
 
-function toggleSaveHelp() {
-  const help = document.getElementById('saveHelp');
-  const btn = document.querySelector('.save-link');
-  const isHidden = help.hidden;
+  function stopPlayback() {
+    stopCurrentAudio();
+    hideAllPanels();
+    currentAudio = null;
+  }
 
-  help.hidden = !isHidden;
-  btn.setAttribute('aria-expanded', String(isHidden));
-}
+  function playSection(audioId, panelId) {
+    const nextAudio = document.getElementById(audioId);
+    const nextPanel = document.getElementById(panelId);
+
+    stopCurrentAudio();
+    hideAllPanels();
+
+    if (nextPanel) {
+      nextPanel.hidden = false;
+    }
+
+    if (!nextAudio) return;
+
+    currentAudio = nextAudio;
+    currentAudio.currentTime = 0;
+    currentAudio.play().catch(() => {});
+  }
 </script>
 
 </body>
