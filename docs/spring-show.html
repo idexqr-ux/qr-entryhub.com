@@ -30,7 +30,7 @@
 <p class="sr-only">
   I’ll guide you to your ticket and arrival.
 </p>
-    </p>
+
   </section>
 
   <p class="venue">National Exhibition Centre, Birmingham</p>
@@ -58,34 +58,19 @@
     </a>
   </div>
 
-  <p class="muted-line">Getting there</p>
+ <p class="muted-line">Getting there</p>
 
-  <div class="listen-group">
-    <button class="quiet-button" type="button" onclick="playEmbeddedAudio('trainAudio')">
-      Train — note
-    </button>
+<div class="note-grid">
+  <button type="button" class="quiet-button" onclick="playSection('trainAudio')">
+    Train — note
+  </button>
 
-    <button class="quiet-button" type="button" onclick="playEmbeddedAudio('eventAudio')">
-      Event — note
-    </button>
-
-    <button class="quiet-button" type="button" onclick="playEmbeddedAudio('parkingAudio')">
-      Parking — note
-    </button>
-   
-  </div>
-
-  <div class="note-grid">
-  <button type="button" class="quiet-button" onclick="playSection('eventAudio','eventPanel')">
+  <button type="button" class="quiet-button" onclick="playSection('eventAudio')">
     Event — note
   </button>
 
-  <button type="button" class="quiet-button" onclick="playSection('parkingAudio','parkingPanel')">
+  <button type="button" class="quiet-button" onclick="playSection('parkingAudio')">
     Parking — note
-  </button>
-
-  <button type="button" class="quiet-button" onclick="playSection('trainAudio','trainPanel')">
-    Train — note
   </button>
 </div>
 
@@ -96,7 +81,7 @@
 >
   Stop audio
 </button>
-
+  
   <div class="listen-group">
     <a href="ticket.html" class="quiet-button">Your ticket</a>
   </div>
@@ -108,6 +93,7 @@
       add to your home screen
     </button>
   </p>
+    </div>
 
   <div id="saveHelp" class="save-help" hidden>
     <p><strong>To keep this handy:</strong></p>
@@ -145,17 +131,10 @@
     currentAudio = null;
   }
 
-  function playSection(audioId, panelId) {
+  function playSection(audioId) {
     const nextAudio = document.getElementById(audioId);
-    const nextPanel = document.getElementById(panelId);
 
     stopCurrentAudio();
-
-    document.querySelectorAll('.note-panel').forEach(panel => {
-      panel.hidden = true;
-    });
-
-    if (nextPanel) nextPanel.hidden = false;
 
     if (!nextAudio) return;
 
@@ -164,6 +143,5 @@
     currentAudio.play().catch(() => {});
   }
 </script>
-
 </body>
 </html>
