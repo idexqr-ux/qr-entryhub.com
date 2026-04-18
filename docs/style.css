@@ -109,6 +109,12 @@ h1 {
   border-color: #AEBDB7;
 }
 
+.stop-button {
+  margin-top: 10px;
+  background: #e9efec;
+  border: 1px solid #cfd8d4;
+}
+
 .back-link {
   display: inline-block;
   margin-top: 20px;
