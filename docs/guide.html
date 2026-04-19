@@ -65,48 +65,40 @@
   <p class="muted-line">Notes for your visit</p>
 
   <div class="note-grid">
-    <button type="button" class="quiet-button" onclick="playSection('trainAudio', 'Train information', 'trainText')">
-      Train — note
-    </button>
+  <button type="button" class="quiet-button" onclick="playSection('trainAudio', 'Train information', 'trainText')">
+    Train — note
+  </button>
 
-    <button type="button" class="quiet-button" onclick="playSection('eventAudio', 'Event information', 'eventText')">
-      Event — note
-    </button>
+  <button type="button" class="quiet-button" onclick="playSection('eventAudio', 'Event information', 'eventText')">
+    Event — note
+  </button>
 
-    <button type="button" class="quiet-button" onclick="playSection('parkingAudio', 'Parking information', 'parkingText')">
-      Parking — note
-    </button>
-  </div>
+  <button type="button" class="quiet-button" onclick="playSection('parkingAudio', 'Parking information', 'parkingText')">
+    Parking — note
+  </button>
+</div>
 
-  <button
-    type="button"
-    class="quiet-button stop-button"
-    onclick="stopPlayback()"
-  >
+<!-- 👇 THESE GO HERE (not inside a button) -->
 
-    <div id="trainText" class="audio-text" hidden>
+<div id="trainText" class="audio-text" hidden>
   <p><strong>Train — note</strong></p>
-  <p>
-    If you're arriving by train, follow the main flow of people leaving the station towards the NEC.
-  </p>
-  <p>
-    The route can feel busy, so take your time and stay with the movement around you.
-  </p>
-  <p>
-    If you're unsure at any point, staff are usually nearby and can guide you to Hall Three.
-  </p>
+  <p>If you're arriving by train, follow the main flow of people leaving the station towards the NEC.</p>
+  <p>The route can feel busy, so take your time and stay with the movement around you.</p>
+  <p>If you're unsure at any point, staff are usually nearby and can guide you to Hall Three.</p>
 </div>
 
-    <div id="parkingText" class="audio-text" hidden>
+<div id="eventText" class="audio-text" hidden>
+  <p><strong>Event — note</strong></p>
+  <p>The September Home and Living Show at the National Exhibition Centre, Birmingham.</p>
+  <p>Saturday 9th September. Doors open at 10:00 am.</p>
+  <p>Hall Three, Block B, Row 12 — just to the right as you enter the building.</p>
+</div>
+
+<div id="parkingText" class="audio-text" hidden>
   <p><strong>Parking — note</strong></p>
-  <p>
-    Parking is in the yellow car park.
-  </p>
-  <p>
-    Follow the colour signs as you arrive, and shuttle buses will take you to the main entrance.
-  </p>
+  <p>Parking is in the yellow car park.</p>
+  <p>Follow the colour signs as you arrive, and shuttle buses will take you to the main entrance.</p>
 </div>
-
     <div id="eventText" class="audio-text" hidden>
   <p><strong>Event — note</strong></p>
   <p>
@@ -119,9 +111,6 @@
     Hall Three, Block B, Row 12 — just to the right as you enter the building.
   </p>
 </div>
-
-    Stop audio
-  </button>
 
   <div class="save-ticket">
     <p class="save-line">
