@@ -114,12 +114,22 @@ h1 {
   border-color: #AEBDB7;
 }
 
-.stop-button {
-  display: block;
-  width: 100%;
-  margin-top: 12px;
-  background: #e9efec;
-  border: 1px solid #cfd8d4;
+.stop-inline {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #222222;
+  font: inherit;
+  font-size: 0.98rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.stop-inline:hover,
+.stop-inline:focus {
+  color: #000000;
 }
 
 .back-link {
