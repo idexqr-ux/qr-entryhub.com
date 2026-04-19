@@ -294,6 +294,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;   /* keeps your centred style */
-  gap: 12px;             /* clean spacing between buttons */
+  gap: 14px;             /* clean spacing between buttons */
   margin-top: 16px;
 }
