@@ -72,15 +72,15 @@
  <p class="muted-line">Notes for your visit</p>
 
 <div class="note-grid">
-  <button type="button" class="quiet-button" onclick="playSection('trainAudio', 'Train information')">
+  <button type="button" class="quiet-button" onclick="playSection('trainAudio', 'Train information', 'trainText')">
     Train — note
   </button>
 
-  <button type="button" class="quiet-button" onclick="playSection('eventAudio', 'Event information')">
+  <button type="button" class="quiet-button" onclick="playSection('eventAudio', 'Event information', 'eventText')">
     Event — note
   </button>
 
-  <button type="button" class="quiet-button" onclick="playSection('parkingAudio', 'Parking information')">
+  <button type="button" class="quiet-button" onclick="playSection('parkingAudio', 'Parking information', 'parkingText')">
     Parking — note
   </button>
 </div>
@@ -134,9 +134,16 @@
     }
   }
 
+  function hideAllText() {
+    document.querySelectorAll('.audio-text').forEach(block => {
+      block.hidden = true;
+    });
+  }
+
   function stopPlayback() {
     stopCurrentAudio();
     currentAudio = null;
+    hideAllText();
 
     const status = document.getElementById('audioStatus');
     if (status) {
@@ -144,11 +151,19 @@
     }
   }
 
-  function playSection(audioId, label) {
+  function playSection(audioId, label, textId) {
     const nextAudio = document.getElementById(audioId);
     const status = document.getElementById('audioStatus');
 
     stopCurrentAudio();
+    hideAllText();
+
+    if (textId) {
+      const textBlock = document.getElementById(textId);
+      if (textBlock) {
+        textBlock.hidden = false;
+      }
+    }
 
     if (!nextAudio) return;
 
