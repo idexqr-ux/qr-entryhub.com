@@ -27,7 +27,8 @@
     <h1 id="page-title" class="sr-only">September Home and Living Show guide</h1>
     <p class="sr-only">
   You’ve opened your guide for the September Home and Living Show.
-  This page includes helpful notes for your visit.
+  Tap a button and I’ll guide you through your ticket, arrival, and helpful notes for your visit.
+  The audio will change automatically when you choose another option.
 </p>
 
 <p class="sr-only">
@@ -62,6 +63,8 @@
     Open in maps
   </a>
 </div>
+
+  <p id="audioStatus" class="sr-only" aria-live="polite"></p>
 
  <p class="muted-line">Notes for your visit</p>
 
@@ -132,18 +135,31 @@
     currentAudio = null;
   }
 
-  function playSection(audioId) {
-    const nextAudio = document.getElementById(audioId);
-
-    stopCurrentAudio();
-
-    if (!nextAudio) return;
-
-    currentAudio = nextAudio;
+  function stopCurrentAudio() {
+  if (currentAudio) {
+    currentAudio.pause();
     currentAudio.currentTime = 0;
-    currentAudio.play().catch(() => {});
+    currentAudio.load();   // ensures full reset
+  }
+}
+
+  function playSection(audioId, label) {
+  const nextAudio = document.getElementById(audioId);
+  const status = document.getElementById('audioStatus');
+
+  stopCurrentAudio();
+
+  if (!nextAudio) return;
+
+  currentAudio = nextAudio;
+  currentAudio.currentTime = 0;
+
+  if (status && label) {
+    status.textContent = label + " playing";
   }
 
+  currentAudio.play().catch(() => {});
+}
   function toggleSaveHelp() {
   const help = document.getElementById('saveHelp');
   const button = document.querySelector('.save-link');
