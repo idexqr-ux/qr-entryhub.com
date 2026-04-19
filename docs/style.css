@@ -178,12 +178,23 @@ sup {
   text-decoration: none;
 
   cursor: pointer;
+  transition: transform 0.08s ease, background 0.08s ease;
 }
 
 .quiet-button:hover,
 .quiet-button:focus {
   background: var(--button-bg-hover);
   border-color: var(--button-border-hover);
+}
+
+.quiet-button:active {
+  background: #AEBDB7;
+  transform: scale(0.98);
+}
+
+.quiet-button:focus {
+  outline: 2px solid #7a8f88;
+  outline-offset: 2px;
 }
 
 .stop-inline {
@@ -205,6 +216,7 @@ sup {
   text-align: center;
 
   cursor: pointer;
+  transition: transform 0.08s ease, background 0.08s ease;
 }
 
 .stop-inline:hover,
@@ -212,9 +224,9 @@ sup {
   background: var(--stop-bg-hover);
 }
 
-.quiet-button:active {
-  background: #AEBDB7;
-  transform: scale(0.98);
+.stop-inline:focus {
+  outline: 2px solid #7a8f88;
+  outline-offset: 2px;
 }
 
 /* ---------------------------------
@@ -249,10 +261,11 @@ sup {
 }
 
 /* ---------------------------------
-   Back links / footer
+   Navigation / footer
 --------------------------------- */
 
-.back-link {
+.back-link,
+.back-link:visited {
   display: inline-block;
   margin-top: 20px;
   padding-bottom: 2px;
@@ -307,12 +320,6 @@ footer {
   color: var(--muted-strong);
   text-align: center;
   opacity: 0.7;
-}
-
-.back-link,
-.back-link:visited {
-  color: #2b2b2b;        /* same as normal text */
-  text-decoration: none;
 }
 
 /* ---------------------------------
