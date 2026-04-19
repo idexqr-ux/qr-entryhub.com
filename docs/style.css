@@ -1,24 +1,70 @@
 :root {
-  --bg: #F3F5F4;
-  --ink: #1f2428;
+  --bg: #F3F0E8;
+  --ink: #222222;
   --muted: #5b6770;
+  --muted-strong: #3a3a35;
+
   --card: #F1F4F3;
-  --border: #d7dde3;
   --chip: #ffffff;
+
+  --border: #d7dde3;
+  --button-bg: #C9D5D0;
+  --button-border: #B8C6C1;
+  --button-bg-hover: #B8C6C1;
+  --button-border-hover: #AEBDB7;
+
+  --stop-bg: #E6E1D8;
+  --stop-border: #CFC7B8;
+  --stop-bg-hover: #DCD6C8;
+
+  --panel-bg: #F7F4EE;
+  --panel-border: #D8D2C7;
 }
 
-* { box-sizing: border-box; }
+/* ---------------------------------
+   Base
+--------------------------------- */
 
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
-  background: #F3F0E8;       /* softer, warmer “Cotton III” feel */
   min-height: 100vh;
+  background: var(--bg);
   font-family: Arial, sans-serif;
-  font-size: 18px;           /* slightly larger for readability */
+  font-size: 18px;
   line-height: 1.6;
-  color: #222222;   /* stronger, clearer */
+  color: var(--ink);
+}
+
+/* ---------------------------------
+   Layout
+--------------------------------- */
+
+.wrap,
+main.wrap,
+header.hero {
+  width: 100%;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap {
+  padding: 18px 16px;
+  text-align: center;
+}
+
+.hero {
+  margin-top: 6px;
+  margin-bottom: 1.25rem;
+  text-align: center;
 }
 
 .ticket {
@@ -27,18 +73,14 @@ body {
   text-align: center;
 }
 
-.wrap {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 18px 16px;
-  text-align: center;       /* 👈 add this */
-}
+/* ---------------------------------
+   Typography
+--------------------------------- */
 
-.hero {
-  text-align: center;
-  margin-top: 6px;
-  margin-bottom: 1.25rem;
-  width: 100%;              /* 👈 add this */
+h1 {
+  margin: 6px 0;
+  font-size: 1.8rem;
+  line-height: 1.2;
 }
 
 .kicker {
@@ -47,75 +89,101 @@ body {
   letter-spacing: 0.02em;
 }
 
-h1 {
-  margin: 6px 0 6px;
-  font-size: 1.8rem;
-  line-height: 1.2;
+.sub {
+  margin: 14px 0;
+  font-size: 1rem;
+  color: var(--muted);
 }
+
+.helpful-line {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.venue {
+  margin-top: 8px;
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+}
+
+.muted-line {
+  margin: 12px 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.ticket-name {
+  margin: 10px 0 2px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.ticket-id {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+sup {
+  font-size: 0.65em;
+  vertical-align: 0.25em;
+}
+
+/* ---------------------------------
+   Links / entry links
+--------------------------------- */
 
 .links {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
   margin-top: 20px;
+  margin-bottom: 22px;
 }
 
-.links a {
+.links a,
+.links a:visited {
   display: inline-block;
   padding: 12px 20px;
   border-radius: 999px;
   text-decoration: none;
   background: #e9ecea;
   border: 1px solid #d2d8d5;
-  color: #2f4a44;
+  color: #1f1f1f;
   letter-spacing: 0.04em;
 }
 
-.sub {
-  margin: 0 0 8px;
-  color: var(--muted);
-}
-
-.muted-line {
-  margin: 12px 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.listen-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
+/* ---------------------------------
+   Buttons
+--------------------------------- */
 
 .quiet-button {
-  display: block;              /* key change */
-  width: 100%;                 /* fills container nicely */
-  max-width: 420px;            /* keeps your elegant limit */
-  margin: 12px auto;           /* spacing + centred */
-  background: #C9D5D0;
-  border: 1px solid #B8C6C1;
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 12px auto;
+  padding: 1rem 1.3rem;
+
+  background: var(--button-bg);
+  border: 1px solid var(--button-border);
   border-radius: 999px;
-  padding: 1rem 1.3rem;      /* slightly more touch-friendly */
-  
+
   font: inherit;
-  font-size: 1.05rem;     /* ⬆ slightly larger */
-  color: #1f1f1f;
-  letter-spacing: 0.02em; /* ⬆ gentle spacing */
-  
-  cursor: pointer;
+  font-size: 1.05rem;
   line-height: 1.3;
-  text-decoration: none;
+  letter-spacing: 0.02em;
+  color: #1f1f1f;
   text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
 }
 
 .quiet-button:hover,
 .quiet-button:focus {
-  background: #B8C6C1;
-  border-color: #AEBDB7;
+  background: var(--button-bg-hover);
+  border-color: var(--button-border-hover);
 }
 
 .stop-inline {
@@ -125,37 +193,72 @@ h1 {
   margin: 16px auto 0;
   padding: 0.9rem 1.2rem;
 
-  background: #E6E1D8;        /* soft neutral, slightly distinct */
-  border: 1px solid #CFC7B8;
+  background: var(--stop-bg);
+  border: 1px solid var(--stop-border);
   border-radius: 999px;
 
   font: inherit;
   font-size: 1rem;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: #1f1f1f;
-  font-weight: 500;
+  text-align: center;
 
   cursor: pointer;
-  text-align: center;
 }
 
 .stop-inline:hover,
 .stop-inline:focus {
-  background: #DCD6C8;
+  background: var(--stop-bg-hover);
 }
+
+/* ---------------------------------
+   Button groups / audio content
+--------------------------------- */
+
+.listen-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.note-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.audio-text {
+  max-width: 42rem;
+  margin: 16px auto 0;
+  padding: 16px 18px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  text-align: left;
+}
+
+/* ---------------------------------
+   Back links / footer
+--------------------------------- */
 
 .back-link {
   display: inline-block;
   margin-top: 20px;
-  color: #2b2b2b;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(43,43,43,0.25);
   padding-bottom: 2px;
+  color: #2b2b2b;
   text-align: center;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(43, 43, 43, 0.25);
 }
 
 .back-link:hover {
-  border-bottom-color: rgba(43,43,43,0.5);
+  border-bottom-color: rgba(43, 43, 43, 0.5);
 }
 
 .back-link.top {
@@ -168,14 +271,42 @@ h1 {
   color: var(--muted);
 }
 
+.footer .back-link {
+  display: block;
+  margin: 8px 0;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-line {
+  width: 50px;
+  height: 1px;
+  margin: 0 auto 12px;
+  background: #c9d5d0;
+  opacity: 0.7;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
 .powered-by {
-  margin-top: 33px;   
+  margin-top: 33px;
   margin-bottom: 10px;
   font-size: 0.85rem;
-  color: #3a3a35;
+  color: var(--muted-strong);
   text-align: center;
   opacity: 0.7;
 }
+
+/* ---------------------------------
+   Save to home screen
+--------------------------------- */
 
 .save-ticket {
   margin-top: 1.25rem;
@@ -190,9 +321,9 @@ h1 {
 }
 
 .save-link {
+  padding: 0;
   background: none;
   border: none;
-  padding: 0;
   font: inherit;
   color: #5f7a72;
   text-decoration: underline;
@@ -206,8 +337,8 @@ h1 {
 }
 
 .save-help {
-  margin: 0.85rem auto 0;
   max-width: 32rem;
+  margin: 0.85rem auto 0;
   padding: 0.9rem 1rem;
   border-radius: 12px;
   background: #f3f5f4;
@@ -225,6 +356,10 @@ h1 {
   margin-bottom: 0;
 }
 
+/* ---------------------------------
+   Accessibility
+--------------------------------- */
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -237,22 +372,19 @@ h1 {
   border: 0;
 }
 
-sup {
-  font-size: 0.65em;
-  vertical-align: 0.25em;
-}
+/* ---------------------------------
+   Ticket status
+--------------------------------- */
 
-/* --- Door status bar --- */
 .status {
   width: 100%;
-  text-align: center;
-  font-weight: bold;
-  font-size: 32px;
   padding: 16px 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
-/* Status colours */
 .status.accept {
   background: #e6f4ea;
   color: #1e7e34;
@@ -266,94 +398,4 @@ sup {
 .status.invalid {
   background: #fdecea;
   color: #b00020;
-}
-
-header.hero,
-main.wrap,
-.wrap {
-  width: 100%;
-  max-width: 860px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-header.hero,
-header.hero .kicker,
-header.hero h1,
-header.hero .sub,
-main.wrap {
-  text-align: center;
-}
-
-.venue {
-  font-size: 1.1rem;
-  letter-spacing: 0.03em;
-  margin-top: 8px;
-  margin-bottom: 6px;
-}
-
-.sub {
-  font-size: 1rem;
-  margin-top: 14px;
-  margin-bottom: 14px;
-}
-
-.helpful-line {
-  margin-top: 18px;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.ticket-name {
-  margin: 10px 0 2px;
-  font-size: 1.05rem;
-  font-weight: 600;
-}
-
-.ticket-id {
-  margin: 0 0 10px;
-  font-size: 0.9rem;
-  color: #5b6770;
-}
-
-footer {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.footer-line {
-  width: 50px;
-  height: 1px;
-  background: #c9d5d0;
-  margin: 0 auto 12px;
-  opacity: 0.7;
-}
-
-.footer-text {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.footer .back-link {
-  display: block;
-  margin: 8px 0;
-}
-
-.note-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;   /* keeps your centred style */
-  gap: 14px;             /* clean spacing between buttons */
-  margin-top: 16px;
-}
-
-.audio-text {
-  max-width: 42rem;
-  margin: 16px auto 0;
-  padding: 16px 18px;
-  background: #F7F4EE;
-  border: 1px solid #D8D2C7;
-  border-radius: 14px;
-  text-align: left;
 }
