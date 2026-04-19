@@ -157,13 +157,18 @@ h1 {
   border-bottom-color: rgba(43,43,43,0.5);
 }
 
+.back-link.top {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
 .footer {
   padding: 28px 0 36px;
   color: var(--muted);
 }
 
 .powered-by {
-  margin-top: 33px;
+  margin-top: 33px;   
   margin-bottom: 10px;
   font-size: 0.85rem;
   color: #3a3a35;
@@ -327,6 +332,11 @@ footer {
   margin: 0;
   font-size: 0.9rem;
   color: var(--muted);
+}
+
+.footer .back-link {
+  display: block;
+  margin: 8px 0;
 }
 
 .note-grid {
