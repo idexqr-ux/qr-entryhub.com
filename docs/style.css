@@ -79,7 +79,7 @@ header.hero {
 
 h1 {
   margin: 6px 0;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   line-height: 1.2;
 }
 
@@ -90,9 +90,10 @@ h1 {
 }
 
 .sub {
-  margin: 14px 0;
-  font-size: 1rem;
+  margin: 10px 0 16px;
+  font-size: 0.95rem;
   color: var(--muted);
+  font-style: italic;
 }
 
 .helpful-line {
@@ -165,20 +166,20 @@ sup {
 }
 
 .event {
-  font-size: 1.15rem;
-  margin: 18px 0 22px;
+  font-size: 1.12rem;
+  margin: 16px 0 20px;
+}
+
+.explore-links {
+  font-size: 1.12rem;
+  line-height: 1.9;
 }
 
 .explore-label {
   font-size: 0.95rem;
   color: var(--muted);
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.explore-links {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-style: italic;
+  margin: 16px 0 10px;
 }
 
 .text-link:active {
