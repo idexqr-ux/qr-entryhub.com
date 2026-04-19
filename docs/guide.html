@@ -47,10 +47,13 @@
   Saturday the ninth of September — the doors open at ten a m
 </p>
 
-  <p class="muted-line">
-    Hall 3, Block B, Row 12 — just to the right as you enter
-  </p>
+  <p class="muted-line" aria-hidden="true">
+  Hall 3, Block B, Row 12 — just to the right as you enter
+</p>
 
+<p class="sr-only">
+  Hall 3, Block B, Row 12, just to the right as you enter.
+</p>
   <div class="listen-group">
   <a href="ticket.html" class="quiet-button">Your ticket</a>
 
@@ -69,15 +72,15 @@
  <p class="muted-line">Notes for your visit</p>
 
 <div class="note-grid">
-  <button type="button" class="quiet-button" onclick="playSection('trainAudio')">
+  <button type="button" class="quiet-button" onclick="playSection('trainAudio', 'Train information')">
     Train — note
   </button>
 
-  <button type="button" class="quiet-button" onclick="playSection('eventAudio')">
+  <button type="button" class="quiet-button" onclick="playSection('eventAudio', 'Event information')">
     Event — note
   </button>
 
-  <button type="button" class="quiet-button" onclick="playSection('parkingAudio')">
+  <button type="button" class="quiet-button" onclick="playSection('parkingAudio', 'Parking information')">
     Parking — note
   </button>
 </div>
@@ -127,49 +130,48 @@
     if (currentAudio) {
       currentAudio.pause();
       currentAudio.currentTime = 0;
+      currentAudio.load();
     }
   }
 
   function stopPlayback() {
     stopCurrentAudio();
     currentAudio = null;
-  }
 
-  function stopCurrentAudio() {
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0;
-    currentAudio.load();   // ensures full reset
+    const status = document.getElementById('audioStatus');
+    if (status) {
+      status.textContent = 'Audio stopped';
+    }
   }
-}
 
   function playSection(audioId, label) {
-  const nextAudio = document.getElementById(audioId);
-  const status = document.getElementById('audioStatus');
+    const nextAudio = document.getElementById(audioId);
+    const status = document.getElementById('audioStatus');
 
-  stopCurrentAudio();
+    stopCurrentAudio();
 
-  if (!nextAudio) return;
+    if (!nextAudio) return;
 
-  currentAudio = nextAudio;
-  currentAudio.currentTime = 0;
+    currentAudio = nextAudio;
+    currentAudio.currentTime = 0;
 
-  if (status && label) {
-    status.textContent = label + " playing";
+    if (status && label) {
+      status.textContent = label + ' playing';
+    }
+
+    currentAudio.play().catch(() => {});
   }
 
-  currentAudio.play().catch(() => {});
-}
   function toggleSaveHelp() {
-  const help = document.getElementById('saveHelp');
-  const button = document.querySelector('.save-link');
+    const help = document.getElementById('saveHelp');
+    const button = document.querySelector('.save-link');
 
-  if (!help || !button) return;
+    if (!help || !button) return;
 
-  const isHidden = help.hidden;
-  help.hidden = !isHidden;
-  button.setAttribute('aria-expanded', String(isHidden));
-}
+    const isHidden = help.hidden;
+    help.hidden = !isHidden;
+    button.setAttribute('aria-expanded', String(isHidden));
+  }
 </script>
 </body>
 </html>
