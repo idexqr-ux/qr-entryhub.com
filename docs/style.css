@@ -300,3 +300,13 @@ footer {
   gap: 14px;             /* clean spacing between buttons */
   margin-top: 16px;
 }
+
+.audio-text {
+  max-width: 42rem;
+  margin: 16px auto 0;
+  padding: 16px 18px;
+  background: #F7F4EE;
+  border: 1px solid #D8D2C7;
+  border-radius: 14px;
+  text-align: left;
+}
