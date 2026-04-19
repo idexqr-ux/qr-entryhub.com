@@ -13,9 +13,12 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: #f7f9f8;
+  background: #F3F0E8;       /* softer, warmer “Cotton III” feel */
   min-height: 100vh;
   font-family: Arial, sans-serif;
+  font-size: 18px;           /* slightly larger for readability */
+  line-height: 1.6;
+  color: #2f2f2a;            /* softer than pure black */
 }
 
 .ticket {
