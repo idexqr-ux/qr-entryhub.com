@@ -212,6 +212,11 @@ sup {
   background: var(--stop-bg-hover);
 }
 
+.quiet-button:active {
+  background: #AEBDB7;
+  transform: scale(0.98);
+}
+
 /* ---------------------------------
    Button groups / audio content
 --------------------------------- */
