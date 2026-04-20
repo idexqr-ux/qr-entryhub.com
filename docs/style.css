@@ -171,9 +171,9 @@ sup {
 }
 
 .note {
-  font-size: 2rem;    ****A note for Anna font***
+  font-size: 2rem;      ****A note for Anna font***
   font-style: italic;
-  opacity: 0.85;
+  opacity: 0.65;
   margin-bottom: 1rem;
 }
 
