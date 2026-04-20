@@ -199,6 +199,14 @@ sup {
 font-size: 1.05rem !important;      ***body of text font size ****
 }
 
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f2a1d;
+  margin: 1.5rem 0 1rem;
+  text-align: center;
+}
+
 /* ---------------------------------
    Links / entry links
 --------------------------------- */
