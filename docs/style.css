@@ -170,6 +170,13 @@ sup {
   vertical-align: 0.25em;
 }
 
+.note {
+  font-size: 2rem;    ****A note for Anna font***
+  font-style: italic;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
 /* ---------------------------------
    Links / entry links
 --------------------------------- */
