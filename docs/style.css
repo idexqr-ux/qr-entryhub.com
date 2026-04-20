@@ -114,12 +114,15 @@ header.hero {
 .ticket-button {
   display: inline-block;
   padding: 0.8rem 1.4rem;
-  background: #2e5a3f;   /* your green */
+  background: #2e5a3f;
   color: #fff;
   text-decoration: none;
   border-radius: 20px;
   font-size: 1rem;
   font-weight: 500;
+  line-height: 1;          /* 🔑 keeps height consistent */
+  min-width: 180px;       /* 🔑 optional: makes width consistent */
+  text-align: center;
 }
 
 .ticket-button:hover {
