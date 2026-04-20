@@ -196,7 +196,7 @@ sup {
 }
 
 .wrap p {
-  font-size: 1.05rem;      ***body of text font size ****
+font-size: 1.05rem !important;      ***body of text font size ****
 }
 
 /* ---------------------------------
