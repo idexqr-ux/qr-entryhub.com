@@ -177,6 +177,10 @@ sup {
   margin-bottom: 1rem;
 }
 
+.wrap p {
+  font-size: 1.05rem;      ***body of text font size ****
+}
+
 /* ---------------------------------
    Links / entry links
 --------------------------------- */
