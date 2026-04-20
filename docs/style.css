@@ -73,6 +73,29 @@ header.hero {
   text-align: center;
 }
 
+.qr-code {
+  display: block;
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+  margin: 1.1rem auto 0.4rem;
+  background: #fff;
+  padding: 6px;        /* creates proper quiet zone */
+  border: 2px solid #000; /* your visual border */
+}
+
+.qr-label {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1.2rem;
+}
+
+.qr-section {
+  margin-bottom: 1.5rem;
+}
+
 /* ---------------------------------
    Typography
 --------------------------------- */
