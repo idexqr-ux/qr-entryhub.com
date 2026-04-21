@@ -131,6 +131,14 @@ margin: 18px 0;
 text-align: left;
 }
 
+.note-card.welcome-note {
+  margin-bottom: 20px;
+}
+
+.note-card.guide-note {
+  margin-top: 24px;
+}  
+
 .note-card .save-link {
   margin-left: 4px;
 }
