@@ -104,6 +104,43 @@ margin: 18px 0;
 text-align: left;
 }
 
+.note-card .save-link {
+  margin-left: 4px;
+}
+
+.save-link {
+  padding: 0;
+  background: none;
+  border: none;
+  font: inherit;
+
+  color: #5f7a72;
+  text-decoration: underline;
+
+  cursor: pointer;
+
+  -webkit-appearance: none;  /* 👈 stops iOS styling */
+  appearance: none;
+}
+
+/* force consistent colour in all states */
+.save-link:visited,
+.save-link:hover,
+.save-link:focus,
+.save-link:active {
+  color: #5f7a72;
+}
+
+/* subtle interaction instead of colour change */
+.save-link:hover,
+.save-link:focus {
+  text-decoration-thickness: 2px;
+}
+
+.save-link {
+  text-underline-offset: 2px;
+}
+
 .note-logo {
 width: 26px;
 margin-bottom: 10px;
