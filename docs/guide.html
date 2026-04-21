@@ -28,7 +28,7 @@
 
 <main class="wrap">
 
-    <section aria-labelledby="page-title">
+  <section aria-labelledby="page-title">
     <h1 id="page-title" class="sr-only">September Home and Living Show</h1>
     <p class="sr-only">
       September Home and Living Show.
@@ -41,10 +41,10 @@
     </p>
   </section>
 
-    <p class="sub helpful-line" aria-hidden="true">
+  <p class="sub helpful-line" aria-hidden="true">
     <em>Helpful notes for your visit — before you arrive and while you’re there.</em>
   </p>
-  
+
   <div class="listen-group">
     <a href="ticket.html" class="quiet-button">Your ticket</a>
 
@@ -58,7 +58,7 @@
     </a>
   </div>
 
-    <p id="audioStatus" class="sr-only" aria-live="polite"></p>
+  <p id="audioStatus" class="sr-only" aria-live="polite"></p>
 
   <h2 class="section-title">Notes for your visit</h2>
 
@@ -107,38 +107,29 @@
       Stop audio
     </button>
   </div>
-    
-  <!-- 👇 Note cue (visual recognition) -->
-<div class="note-card">
-  <img src="images/note-logo.png" alt="" class="note-logo" />
 
-  <p>
-    Keep this handy —
-    <button class="save-link" type="button"
-      onclick="toggleSaveHelp()"
-      aria-expanded="false"
-      aria-controls="saveHelp">
-      add to your home screen
-    </button>
-  </p>
+  <div class="note-card" aria-hidden="true">
+    <img src="images/note-logo.png" alt="" class="note-logo" />
+    <p>
+      Keep this handy —
+      <button class="save-link" type="button" onclick="toggleSaveHelp()" aria-expanded="false" aria-controls="saveHelp">
+        add to your home screen
+      </button>
+    </p>
 
-  <div id="saveHelp" class="save-help" hidden>
-    <p><strong>To keep this handy:</strong></p>
-    <p>Tap the share icon at the top of your screen, then choose <em>Add to Home Screen</em>.</p>
+    <div id="saveHelp" class="save-help" hidden>
+      <p><strong>To keep this handy:</strong></p>
+      <p>Tap the share icon at the top of your screen, then choose <em>Add to Home Screen</em>.</p>
+    </div>
   </div>
-</div>
 
-<footer class="footer" style="text-align:center; margin-top:32px;">
-  <a href="https://idexqr.com" class="back-link">
-    Back to IdexQR
-  </a>
-  <p class="powered-by">Powered by IdexQR</p>
-
-  <a href="#top" class="back-link top">↑ Back to top</a>
-</footer>
+  <footer class="footer" style="text-align:center; margin-top:32px;">
+    <a href="https://idexqr.com" class="back-link">Back to IdexQR</a>
+    <p class="powered-by">Powered by IdexQR</p>
+    <a href="#top" class="back-link top">↑ Back to top</a>
+  </footer>
 
 </main>
-
 <audio id="trainAudio" src="audio/train-note.mp3" preload="none"></audio>
 <audio id="eventAudio" src="audio/event-note.mp3" preload="none"></audio>
 <audio id="parkingAudio" src="audio/parking-note.mp3" preload="none"></audio>
