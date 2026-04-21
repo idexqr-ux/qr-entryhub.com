@@ -243,7 +243,7 @@ transform: scale(0.98);
   width: 100%;
   max-width: 420px;
   margin: 16px auto 0;
-  padding: 0.9rem 1.2rem;
+  padding: 1rem 1.2rem;
 
   background: var(--stop-bg);
   border: 1px solid var(--stop-border);
