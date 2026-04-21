@@ -163,17 +163,18 @@ margin-bottom: 10px;
 }
 
 .note {
-margin: 0 0 8px 0;
-font-size: 1.1rem;
-font-style: italic;
-color: #6f8f7c;
+  margin: 0 0 10px 0;
+  font-size: 1.12rem;
+  font-style: italic;
+  color: #6f8f7c;
+  letter-spacing: 0.01em;
 }
 
 .note-card p {
-margin: 0 0 8px 0;
-font-size: 1.05rem;
-line-height: 1.5;
-color: #2F2F2F;
+  margin: 0 0 10px 0;
+  font-size: 1.08rem;
+  line-height: 1.55;
+  color: #2F2F2F;
 }
 
 .note-subtle {
