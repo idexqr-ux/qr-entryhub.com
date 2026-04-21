@@ -148,9 +148,7 @@ margin-top: 24px;
   border-radius: 6px;
 
   border: 1px solid rgba(184, 198, 193, 0.6);   /* same tone as button border */
-  padding: 2px;
-  background: transparent;   /* 👈 key change */
-}
+  }
 
 .note {
 margin: 0 0 10px 0;
