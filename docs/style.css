@@ -256,14 +256,19 @@ border-bottom-color: rgba(43,43,43,0.5);
 .footer {
 padding: 28px 0 36px;
 color: var(--muted);
+text-align: center;
 }
 
 .powered-by {
-margin-top: 33px;
-font-size: 0.85rem;
-color: var(--muted-strong);
-opacity: 0.7;
-text-align: center;
+  margin-top: 33px;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  color: var(--muted-strong);
+  opacity: 0.7;
+
+  text-align: center;
+  display: block;        /* 👈 ensures centering works */
+  width: 100%;           /* 👈 forces full width */
 }
 
 /* Accessibility */
