@@ -100,6 +100,13 @@ text-align: center;
   color: var(--ink);
 }
 
+.footer-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}  
+
 .venue {
 margin-top: 8px;
 margin-bottom: 6px;
@@ -167,8 +174,8 @@ text-align: left;
 }
 
 .note-logo {
-width: 38px;
-margin-bottom: 10px;
+width: 36px;
+margin-bottom: 12px;
 }
 
 .note {
