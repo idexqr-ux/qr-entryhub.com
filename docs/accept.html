@@ -49,7 +49,11 @@
       padding: 30px 20px;
     }
 
-    .kicker {
+    h1.status-accepted {
+  color: #3f6f5f;
+}
+
+   .kicker {
       margin: 0 0 10px;
       color: var(--muted);
       font-size: 0.95rem;
@@ -111,20 +115,16 @@
 <body>
   <main class="wrap result-shell">
 
-  <section aria-labelledby="page-title">
-    <h1 id="page-title" class="sr-only">Accepted</h1>
-    <p class="sr-only">
-      This ticket has been accepted. Door staff can allow entry.
-    </p>
-  </section>
-
-  <section class="result-card">
-    <p class="kicker">EntryHub</p>
-    <h1 class="status-accepted" aria-hidden="true">Accepted</h1>
+    <section aria-labelledby="page-title">
+      <h1 id="page-title" class="sr-only">Accepted</h1>
+      <p class="sr-only">
+        This ticket has been accepted. Door staff can allow entry.
+      </p>
+    </section>
 
     <section class="result-card">
       <p class="kicker">EntryHub</p>
-      <h1 aria-hidden="true">Accepted</h1>
+      <h1 class="status-accepted" aria-hidden="true">Accepted</h1>
 
       <p class="event-name">September Home and Living Show</p>
       <p class="ticket-ref">Ticket reference: SSE-001</p>
@@ -138,6 +138,7 @@
         <a href="door-check.html">Back to door staff view</a>
       </p>
     </section>
+
   </main>
 </body>
 </html>
