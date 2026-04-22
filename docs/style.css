@@ -149,7 +149,7 @@ h1 {
 
 .footer-text {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: var(--muted);
   text-align: center;
 }
@@ -304,24 +304,24 @@ h1 {
 
 /* Footer / links */
 
-.back-link {
-  margin-top: 20px;
-}
-
-.back-link a {
-  color: #2b2b2b;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(43, 43, 43, 0.25);
-}
-
-.back-link a:hover {
-  border-bottom-color: rgba(43, 43, 43, 0.5);
-}
-
 .footer {
-  padding: 28px 0 36px;
-  color: var(--muted);
   text-align: center;
+  margin-top: 32px;
+}
+
+.footer-links {
+  margin: 6px 0;
+  font-size: 0.9rem;
+}
+
+.back-link {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.back-link:hover {
+  border-bottom-color: rgba(0,0,0,0.5);
 }
 
 .powered-by {
