@@ -129,21 +129,18 @@ h1 {
 }
 
 .text-link,
-.text-link:visited {
+.text-link:visited,
+.text-link:active {
   color: #3e5f54;
   text-decoration: none;
-  border-bottom: 2px solid #C9D5D0;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.2);
   padding-bottom: 2px;
   font-weight: 500;
 }
 
-.text-link {
-  border-bottom: 1px solid rgba(34, 34, 34, 0.2);
-  transition: border-color 0.12s ease;
-}
-
 .text-link:hover,
 .text-link:focus {
+  color: #3e5f54;
   border-bottom-color: rgba(34, 34, 34, 0.6);
 }
 
