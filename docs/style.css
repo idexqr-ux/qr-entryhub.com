@@ -63,6 +63,10 @@ header.hero {
   text-align: center;
 }
 
+.ticket-qr {
+  border-radius: 8px;
+}
+
 /* Typography */
 
 h1 {
