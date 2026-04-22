@@ -232,6 +232,18 @@ text-decoration-thickness: 2px;
   margin-top: 10px;
 }
 
+.status-accepted {
+  color: #3f6f5f; /* calm green */
+}
+
+.status-used {
+  color: #8a6a3a; /* soft amber */
+}
+
+.status-invalid {
+  color: #8a4a4a; /* muted red */
+}
+
 .ticket-ref {
   margin: 0 0 12px;
   color: var(--muted);
