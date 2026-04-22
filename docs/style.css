@@ -213,6 +213,61 @@ color: #5f7a72;
 text-decoration-thickness: 2px;
 }
 
+.result-block {
+  margin-top: 24px;
+  padding: 20px 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.result-block h2 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+.result-block .muted-line {
+  margin-top: 10px;
+}
+
+.ticket-ref {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.proof-line {
+  margin: 0 0 8px;
+}
+
+.result-toggle {
+  margin-top: 18px;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 14px 16px;
+}
+
+.result-toggle summary {
+  cursor: pointer;
+  color: var(--text);
+  font-size: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  list-style: none;
+}
+
+.result-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.result-toggle[open] summary {
+  margin-bottom: 14px;
+}
+
 /* Buttons */
 
 .quiet-button {
