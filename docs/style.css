@@ -135,8 +135,9 @@ color: var(--muted);
 
 .event-date,
 .event-seat {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 500;
+  color: #24302c; /* slightly deeper than your base text */
 }
 
 .text-link,
