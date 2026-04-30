@@ -13,9 +13,9 @@
   --button-bg-hover: #B8C6C1;
   --button-border-hover: #AEBDB7;
 
-  --stop-bg: #EAF1ED;
-  --stop-border: #C9D5D0;
-  --stop-bg-hover: #DDE9E3;
+  --stop-bg: #315f86;
+  --stop-border: #274d6d;
+  --stop-bg-hover: #274d6d;
 
   --panel-bg: #F7F4EE;
   --panel-border: #D8D2C7;
@@ -272,6 +272,7 @@ h1 {
   margin: 16px auto 0;
   padding: 1rem 1.2rem;
   background: var(--stop-bg);
+  color: #ffffff;
   border: 1px solid var(--stop-border);
   border-radius: 999px;
   font: inherit;
@@ -279,6 +280,12 @@ h1 {
   font-weight: 500;
   text-align: center;
   cursor: pointer;
+}
+
+.stop-inline:hover,
+.stop-inline:focus {
+  background: var(--stop-bg-hover);
+  border-color: var(--stop-border);
 }
 
 /* Groups */
