@@ -272,7 +272,6 @@ h1 {
   margin: 16px auto 0;
   padding: 1rem 1.2rem;
   background: var(--stop-bg);
-  color: #ffffff;
   border: 1px solid var(--stop-border);
   border-radius: 999px;
   font: inherit;
@@ -280,6 +279,7 @@ h1 {
   font-weight: 500;
   text-align: center;
   cursor: pointer;
+  color: #315f86;
 }
 
 .stop-inline:hover,
