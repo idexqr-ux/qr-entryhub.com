@@ -153,9 +153,10 @@ h1 {
 
 .collection-label {
   margin: 0 0 18px;
-  font-size: 0.9rem;
-  color: var(--muted);
-  letter-spacing: 0.04em;
+  font-size: 1rem;
+  color: #4E665C;
+  opacity: 0.82;
+  letter-spacing: 0.03em;
   text-align: center;
 }
 
