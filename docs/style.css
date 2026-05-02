@@ -130,6 +130,14 @@ h1 {
   color: #24302c;
 }
 
+.app-logo {
+  display: block;
+  width: 92px;
+  height: auto;
+  margin: 0 auto 16px;
+  border-radius: 22px;
+}
+
 .text-link,
 .text-link:visited,
 .text-link:active {
