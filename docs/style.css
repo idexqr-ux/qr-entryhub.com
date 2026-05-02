@@ -180,13 +180,6 @@ h1 {
   margin-top: 24px;
 }
 
-.note-logo {
-  width: 40px;
-  margin-bottom: 14px;
-  border-radius: 6px;
-  border: 1px solid rgba(184, 198, 193, 0.6);
-}
-
 .note {
   margin: 0 0 10px 0;
   font-size: 1.12rem;
