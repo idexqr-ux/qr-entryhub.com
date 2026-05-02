@@ -292,7 +292,7 @@ h1 {
 .quiet-button {
   display: block;
   width: 100%;
-  max-width: 380px;
+  max-width: 340px;
   margin: 14px auto;
   padding: 1.1rem 1.4rem;
   background: var(--button-bg);
