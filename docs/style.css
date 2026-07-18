@@ -145,6 +145,21 @@ h1 {
   border-radius: 20px;
 }
 
+.portfolio-brand-name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #3f4a47;
+}
+
+.family-endorsement {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
 .note-logo {
   width: 40px;
   max-width: 40px;
